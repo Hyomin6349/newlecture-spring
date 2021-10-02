@@ -12,7 +12,7 @@
     <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
   </definition>
   
-  <definition name="index" template="/WEB-INF/view/inc/layout.jsp">
+  <definition name="root.index" template="/WEB-INF/view/inc/layout.jsp">
     <put-attribute name="title" value="메인페이지" />
     <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
     <put-attribute name="body" value="/WEB-INF/view/index.jsp" />
