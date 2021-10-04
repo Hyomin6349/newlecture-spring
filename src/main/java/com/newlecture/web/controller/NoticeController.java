@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.newlecture.web.entity.NoticeView;
 import com.newlecture.web.service.NoticeService;
@@ -22,7 +23,7 @@ public class NoticeController {
 	}
 	
 	@RequestMapping("/list")
-	public String List() {
+	public String List(@RequestParam(name="p", defaultValue="1") String page) {
 		List<NoticeView> list = noticeService.getNoticeList("TITLE", "",1);
 		return "notice.list";
 	}
